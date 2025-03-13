@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockholm AI Engineering</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="64x64">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            background: rgba(44, 62, 80, 0.85);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 400px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Preload largest image */
+        .preload-images {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+    <link rel="preload" as="image" href="assets/stockholm-ai-1792w.webp">
+</head>
+<body>
+    <!-- Preload images -->
+    <div class="preload-images">
+        <link rel="preload" as="image" href="assets/stockholm-ai-1792w.webp">
+        <link rel="preload" as="image" href="assets/stockholm-ai-1280w.webp">
+        <link rel="preload" as="image" href="assets/stockholm-ai-640w.webp">
+    </div>
+
+    <header>
+        <picture>
+            <source 
+                srcset="assets/stockholm-ai-1792w.webp 1792w,
+                        assets/stockholm-ai-1280w.webp 1280w,
+                        assets/stockholm-ai-640w.webp 640w"
+                sizes="100vw"
+                type="image/webp">
+            <source 
+                srcset="assets/stockholm-ai-1792w.jpg 1792w,
+                        assets/stockholm-ai-1280w.jpg 1280w,
+                        assets/stockholm-ai-640w.jpg 640w"
+                sizes="100vw"
+                type="image/jpeg">
+            <img src="assets/stockholm-ai-1280w.jpg" 
+                 alt="Stockholm City AI Visualization" 
+                 class="header-image"
+                 width="1792"
+                 height="1024"
+                 loading="eager"
+                 decoding="async">
+        </picture>
+        <div class="header-content">
+            <picture>
+                <source srcset="assets/favicon.webp" type="image/webp">
+                <img src="assets/favicon.png" 
+                     alt="Stockholm AI Engineering Logo" 
+                     class="logo"
+                     width="64"
+                     height="64"
+                     loading="eager"
+                     decoding="async">
+            </picture>
+            <h1>Stockholm AI Engineering</h1>
+            <p>A community for AI developers in Stockholm</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Welcome to Stockholm AI Engineering</h2>
+            <p>We are a community for developers, engineers, and AI enthusiasts in Stockholm. Our goal is to create an inclusive environment where we can share knowledge, experiences, and grow together in AI and machine learning.</p>
+        </section>
+
+        <section class="section">
+            <h2>Upcoming Meetups</h2>
+            <p>Follow us on Meetup to stay updated about our upcoming events and gatherings.</p>
+            <a href="https://www.meetup.com/stockholm-ai-engineering" class="cta-button">Join our Meetup group</a>
+        </section>
+
+        <section class="section">
+            <h2>Code of Conduct</h2>
+            <p>To create an inclusive and respectful environment for all participants, we have adopted a Code of Conduct. This applies to all our events and communication channels.</p>
+            <a href="CODE_OF_CONDUCT.md" class="cta-button">Read our Code of Conduct</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Stockholm AI Engineering. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
