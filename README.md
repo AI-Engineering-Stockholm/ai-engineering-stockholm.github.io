@@ -1,4 +1,4 @@
-# Stockholm AI Engineering
+# AI Engineering Stockholm
 
 This is the official website for the Stockholm AI Engineering community. The website is hosted on GitHub Pages and provides information about our community, upcoming meetups, and our Code of Conduct.
 
