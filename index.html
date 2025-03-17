@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stockholm AI Engineering</title>
+    <title>AI Engineering In Stockholm</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" sizes="64x64">
     <style>
         :root {
@@ -180,14 +180,14 @@
                      loading="eager"
                      decoding="async">
             </picture>
-            <h1>Stockholm AI Engineering</h1>
+            <h1>AI Engineering In Stockholm</h1>
             <p>A community for AI developers in Stockholm</p>
         </div>
     </header>
 
     <div class="container">
         <section class="section">
-            <h2>Welcome to Stockholm AI Engineering</h2>
+            <h2>Welcome to AI Engineering In Stockholm</h2>
             <p>We are a community for developers, engineers, and AI enthusiasts in Stockholm. Our goal is to create an inclusive environment where we can share knowledge, experiences, and grow together in AI and machine learning.</p>
         </section>
 
@@ -205,7 +205,10 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Stockholm AI Engineering. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> AI Engineering In Stockholm. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html> 
