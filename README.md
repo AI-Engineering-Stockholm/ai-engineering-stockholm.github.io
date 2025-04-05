@@ -1,7 +1,5 @@
 # AI Engineering Stockholm
 
-[![Deploy GitHub Pages](https://github.com/AI-Engineering-Stockholm/ai-engineering-stockholm.github.io/actions/workflows/pages-deploy.yml/badge.svg)](https://github.com/AI-Engineering-Stockholm/ai-engineering-stockholm.github.io/actions/workflows/pages-deploy.yml)
-
 This is the official website for the Stockholm AI Engineering community. The website is hosted on GitHub Pages and provides information about our community, upcoming meetups, and our Code of Conduct.
 
 ## About Us
@@ -24,13 +22,7 @@ To run this website locally:
    cd ai-engineering-stockholm.github.io
    ```
 
-2. If you have Jekyll installed (recommended):
-   ```bash
-   bundle install
-   bundle exec jekyll serve
-   ```
-
-3. Or simply open `index.html` in your web browser for a basic preview
+2. Open `index.html` in your web browser for a preview
 
 ## Contributing
 

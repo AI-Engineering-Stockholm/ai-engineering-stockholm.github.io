@@ -54,6 +54,8 @@ We welcome contributions through pull requests:
 
 3. Test your changes by opening the HTML files in your browser
 
+Note: This project uses GitHub Pages' default publishing source (the root of the main branch) without any build process.
+
 ## Style Guidelines
 
 - Use semantic HTML
