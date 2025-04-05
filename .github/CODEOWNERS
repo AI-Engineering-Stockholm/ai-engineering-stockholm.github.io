@@ -1,0 +1,9 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# they will be requested for review when someone opens a pull request.
+* @AI-Engineering-Stockholm/maintainers
+
+# You can also specify different owners for specific files or directories
+# For example:
+# /assets/ @graphics-team
+# *.js @js-team
