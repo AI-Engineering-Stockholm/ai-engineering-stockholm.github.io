@@ -7,10 +7,13 @@
     <link rel="icon" type="image/png" href="assets/favicon.png" sizes="64x64">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --background-color: #f8f9fa;
+            --primary-color: #0f172a;
+            --secondary-color: #0ea5e9;
+            --accent-color: #facc15;
+            --text-color: #1f2933;
+            --muted-text: #64748b;
+            --surface-color: #ffffff;
+            --background-color: #0b1220;
         }
 
         * {
@@ -24,21 +27,33 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
+            min-height: 100vh;
+            position: relative;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.15), transparent 45%),
+                radial-gradient(circle at 80% 0%, rgba(250, 204, 21, 0.15), transparent 35%),
+                radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.1), transparent 40%);
+            background-attachment: fixed;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: clamp(1.5rem, 3vw, 3rem);
+            display: grid;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
         }
 
         header {
             position: relative;
             color: white;
             text-align: center;
-            padding: 0;
             overflow: hidden;
-            height: 500px;
+            height: clamp(360px, 55vh, 520px);
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.45);
+            isolation: isolate;
         }
 
         .header-image {
@@ -49,18 +64,21 @@
             top: 0;
             left: 0;
             z-index: 1;
+            filter: saturate(1.1) brightness(0.85);
         }
 
         .header-content {
             position: relative;
             z-index: 2;
-            padding: 2rem;
-            background: rgba(44, 62, 80, 0.85);
+            padding: clamp(1.5rem, 3vw, 3rem);
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(14, 165, 233, 0.6));
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            backdrop-filter: blur(6px);
         }
 
         .logo {
@@ -73,22 +91,49 @@
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 0.75rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
+        header p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            max-width: 520px;
+        }
+
         .section {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: clamp(1.5rem, 2.5vw, 2.25rem);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: transform 250ms ease, box-shadow 250ms ease;
+            position: relative;
+        }
+
+        .section::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            border-radius: 18px;
+            border: 1px solid rgba(14, 165, 233, 0.12);
+            pointer-events: none;
+        }
+
+        .section:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.2);
         }
 
         h2 {
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--muted-text);
         }
 
         .cta-button {
@@ -99,11 +144,15 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 1rem;
-            transition: background-color 0.3s;
+            transition: transform 200ms ease, box-shadow 200ms ease, background-color 0.3s;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.35);
         }
 
         .cta-button:hover {
             background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 18px 30px rgba(14, 165, 233, 0.4);
         }
 
         footer {
@@ -112,15 +161,22 @@
             background-color: var(--primary-color);
             color: white;
             margin-top: 2rem;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+            box-shadow: 0 -10px 30px rgba(2, 6, 23, 0.6);
         }
 
         @media (max-width: 768px) {
             header {
-                height: 400px;
+                height: 360px;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+            }
+
+            .section {
+                padding: 1.5rem;
             }
         }
 
