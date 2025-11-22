@@ -8,7 +8,7 @@ Stockholm AI Engineering is a community for developers, engineers, and AI enthus
 
 ## Getting Involved
 
-- Join our [Meetup group](https://www.meetup.com/stockholm-ai-engineering) to stay updated about upcoming events
+- Join our [Meetup group](https://luma.com/AIEngineeringInStockholm) to stay updated about upcoming events
 - Follow us on GitHub to contribute to our projects
 - Read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand our community guidelines
 
