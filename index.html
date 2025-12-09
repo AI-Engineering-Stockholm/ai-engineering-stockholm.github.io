@@ -9,7 +9,7 @@
         :root {
             --primary-color: #0f172a;
             --secondary-color: #0ea5e9;
-            --accent-color: #facc15;
+            --accent-color: #f97316;
             --text-color: #1f2933;
             --muted-text: #64748b;
             --surface-color: #ffffff;
@@ -31,7 +31,7 @@
             position: relative;
             background-image:
                 radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.15), transparent 45%),
-                radial-gradient(circle at 80% 0%, rgba(250, 204, 21, 0.15), transparent 35%),
+                radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.15), transparent 35%),
                 radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.1), transparent 40%);
             background-attachment: fixed;
         }
@@ -39,21 +39,26 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: clamp(1.5rem, 3vw, 3rem);
+            padding: clamp(1rem, 2vw, 2rem);
             display: grid;
-            gap: clamp(1.5rem, 3vw, 2.5rem);
+            gap: clamp(1rem, 2vw, 1.5rem);
+            position: relative;
+            z-index: 10;
+            margin-top: 250px;
         }
 
         header {
             position: relative;
             color: white;
             text-align: center;
-            overflow: hidden;
-            height: clamp(360px, 55vh, 520px);
+            overflow: visible;
+            height: clamp(500px, 70vh, 700px);
             border-bottom-left-radius: 32px;
             border-bottom-right-radius: 32px;
             box-shadow: 0 30px 60px rgba(15, 23, 42, 0.45);
             isolation: isolate;
+            margin-bottom: -200px;
+            z-index: 1;
         }
 
         .header-image {
@@ -64,35 +69,41 @@
             top: 0;
             left: 0;
             z-index: 1;
-            filter: saturate(1.1) brightness(0.85);
+            filter: saturate(1.1) brightness(0.9);
         }
 
         .header-content {
-            position: relative;
+            position: absolute;
             z-index: 2;
             padding: clamp(1.5rem, 3vw, 3rem);
-            background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(14, 165, 233, 0.6));
-            height: 100%;
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.65), rgba(14, 165, 233, 0.35));
+            width: 100%;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            backdrop-filter: blur(6px);
+            backdrop-filter: blur(2px);
         }
 
         .logo {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 1rem;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 0.5rem;
             border-radius: 50%;
-            border: 2px solid white;
+            border: 3px solid white;
             object-fit: cover;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: bicubic;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         h1 {
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
@@ -105,9 +116,9 @@
         .section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            padding: clamp(1.5rem, 2.5vw, 2.25rem);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-            border: 1px solid rgba(226, 232, 240, 0.8);
+            padding: clamp(1.25rem, 2vw, 1.75rem);
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.25), 0 10px 20px rgba(15, 23, 42, 0.15);
+            border: 2px solid var(--accent-color);
             transition: transform 250ms ease, box-shadow 250ms ease;
             position: relative;
         }
@@ -117,19 +128,24 @@
             position: absolute;
             inset: 1px;
             border-radius: 18px;
-            border: 1px solid rgba(14, 165, 233, 0.12);
+            border: 2px solid rgba(249, 115, 22, 0.3);
             pointer-events: none;
         }
 
         .section:hover {
             transform: translateY(-6px);
-            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.2);
+            box-shadow: 0 30px 60px rgba(249, 115, 22, 0.35), 0 20px 40px rgba(15, 23, 42, 0.2);
+            border-color: var(--accent-color);
         }
 
         h2 {
             color: var(--primary-color);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--accent-color), #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         p {
@@ -138,37 +154,50 @@
 
         .cta-button {
             display: inline-block;
-            background-color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--accent-color), #ea580c);
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             margin-top: 1rem;
-            transition: transform 200ms ease, box-shadow 200ms ease, background-color 0.3s;
-            font-weight: 600;
-            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.35);
+            transition: transform 200ms ease, box-shadow 200ms ease, background 0.3s;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+            border: 2px solid transparent;
         }
 
         .cta-button:hover {
-            background-color: #2980b9;
+            background: linear-gradient(135deg, #ea580c, var(--accent-color));
             transform: translateY(-2px);
-            box-shadow: 0 18px 30px rgba(14, 165, 233, 0.4);
+            box-shadow: 0 18px 30px rgba(249, 115, 22, 0.5);
         }
 
         footer {
             text-align: center;
             padding: 2rem 0;
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), #1e293b);
             color: white;
             margin-top: 2rem;
             border-top-left-radius: 24px;
             border-top-right-radius: 24px;
             box-shadow: 0 -10px 30px rgba(2, 6, 23, 0.6);
+            border-top: 3px solid var(--accent-color);
+            position: relative;
+            z-index: 10;
         }
 
         @media (max-width: 768px) {
             header {
-                height: 360px;
+                height: clamp(450px, 60vh, 600px);
+                margin-bottom: -150px;
+            }
+
+            .header-content {
+                bottom: 0;
+            }
+
+            .container {
+                margin-top: 200px;
             }
 
             h1 {
@@ -197,15 +226,21 @@
             margin-top: 1.5rem;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
-            border: 1px solid #bfcbda88;
-            background: linear-gradient(180deg, #fff, #f8fafc);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2);
+            border: 2px solid var(--accent-color);
+            background: linear-gradient(180deg, #fff, #fff7ed);
+            position: relative;
+            width: 100%;
         }
 
         .calendar-embed iframe {
             width: 100%;
-            min-height: 520px;
+            min-height: 600px;
+            height: 600px;
             border: 0;
+            display: block;
+            margin: 0;
+            padding: 0;
         }
     </style>
     <link rel="preload" as="image" href="assets/stockholm-ai-1792w.webp">
@@ -242,14 +277,17 @@
         </picture>
         <div class="header-content">
             <picture>
+                <source srcset="assets/logo-240w.webp 240w, assets/logo-360w.webp 360w" type="image/webp">
+                <source srcset="assets/logo-240w.png 240w, assets/logo-360w.png 360w" type="image/png">
                 <source srcset="assets/favicon.webp" type="image/webp">
                 <img src="assets/favicon.png" 
                      alt="Stockholm AI Engineering Logo" 
                      class="logo"
-                     width="64"
-                     height="64"
+                     width="120"
+                     height="120"
                      loading="eager"
-                     decoding="async">
+                     decoding="async"
+                     style="image-rendering: -webkit-optimize-contrast; transform: translateZ(0);">
             </picture>
             <h1>AI Engineering In Stockholm</h1>
             <p>A community for AI developers in Stockholm</p>
@@ -265,7 +303,7 @@
         <section class="section">
             <h2>Upcoming Meetups</h2>
             <p>Follow us on Meetup to stay updated about our upcoming events and gatherings.</p>
-            <a href="https://luma.com/AIEngineeringInStockholm" class="cta-button">Join our Meetup group</a>
+            <a href="https://luma.com/AIEngineeringInStockholm" class="cta-button">Subscribe to our Luma calendar</a>
         </section>
 
         <section class="section">
@@ -273,11 +311,14 @@
             <p>Browse upcoming events from our Luma calendar—we hope to see you soon.</p>
             <div class="calendar-embed">
                 <iframe
-                    src="https://luma.com/embed/calendar/cal-IB6jRRjjT9BdIMz/events"
-                    height="520"
+                    src="https://lu.ma/embed/calendar/cal-IB6jRRjjT9BdIMz/events"
+                    height="600"
+                    width="100%"
                     loading="lazy"
                     title="AI Engineering In Stockholm events"
                     allowfullscreen
+                    frameborder="0"
+                    scrolling="no"
                 ></iframe>
             </div>
         </section>
@@ -285,7 +326,7 @@
         <section class="section">
             <h2>Code of Conduct</h2>
             <p>To create an inclusive and respectful environment for all participants, we have adopted a Code of Conduct. This applies to all our events and communication channels.</p>
-            <a href="CODE_OF_CONDUCT.md" class="cta-button">Read our Code of Conduct</a>
+            <a href="code-of-conduct.html" class="cta-button">Read our Code of Conduct</a>
         </section>
     </div>
 
