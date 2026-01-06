@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineering In Stockholm</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="64x64">
+    <title>Community Event – Terms &amp; Conditions (v1) - AI Engineering In Stockholm</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" sizes="64x64">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Community Event Terms & Conditions / Participation Agreement (version 1).">
     <style>
         :root {
             --primary-color: #0f172a;
@@ -94,23 +96,30 @@
             border-radius: 50%;
             border: 3px solid white;
             object-fit: cover;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            -ms-interpolation-mode: bicubic;
-            transform: translateZ(0);
-            backface-visibility: hidden;
         }
 
         h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         header p {
             color: rgba(255, 255, 255, 0.85);
-            font-size: 1.1rem;
-            max-width: 520px;
+            font-size: 1.05rem;
+            max-width: 720px;
+        }
+
+        .pill {
+            display: inline-block;
+            margin-top: 0.75rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(15, 23, 42, 0.25);
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
 
         .section {
@@ -140,7 +149,7 @@
 
         h2 {
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             font-size: 1.5rem;
             background: linear-gradient(135deg, var(--accent-color), #ea580c);
             -webkit-background-clip: text;
@@ -148,11 +157,34 @@
             background-clip: text;
         }
 
-        p {
-            color: var(--muted-text);
+        h3 {
+            color: var(--primary-color);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
         }
 
-        .cta-button {
+        p {
+            color: var(--muted-text);
+            margin-bottom: 1rem;
+        }
+
+        ol {
+            color: var(--muted-text);
+            margin-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            color: var(--muted-text);
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .back-link {
             display: inline-block;
             background: linear-gradient(135deg, var(--accent-color), #ea580c);
             color: white;
@@ -166,7 +198,7 @@
             border: 2px solid transparent;
         }
 
-        .cta-button:hover {
+        .back-link:hover {
             background: linear-gradient(135deg, #ea580c, var(--accent-color));
             transform: translateY(-2px);
             box-shadow: 0 18px 30px rgba(249, 115, 22, 0.5);
@@ -201,7 +233,7 @@
             }
 
             h1 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
             }
 
             .section {
@@ -222,53 +254,34 @@
             border: 0;
         }
 
-        .calendar-embed {
-            margin-top: 1.5rem;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2);
-            border: 2px solid var(--accent-color);
-            background: linear-gradient(180deg, #fff, #fff7ed);
-            position: relative;
-            width: 100%;
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 650;
         }
-
-        .calendar-embed iframe {
-            width: 100%;
-            min-height: 600px;
-            height: 600px;
-            border: 0;
-            display: block;
-            margin: 0;
-            padding: 0;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
-    <link rel="preload" as="image" href="assets/stockholm-ai-1792w.webp">
+    <link rel="preload" as="image" href="../assets/stockholm-ai-1792w.webp">
 </head>
 <body>
-    <!-- Preload images -->
-    <div class="preload-images">
-        <link rel="preload" as="image" href="assets/stockholm-ai-1792w.webp">
-        <link rel="preload" as="image" href="assets/stockholm-ai-1280w.webp">
-        <link rel="preload" as="image" href="assets/stockholm-ai-640w.webp">
-    </div>
-
     <header>
         <picture>
-            <source 
-                srcset="assets/stockholm-ai-1792w.webp 1792w,
-                        assets/stockholm-ai-1280w.webp 1280w,
-                        assets/stockholm-ai-640w.webp 640w"
+            <source
+                srcset="../assets/stockholm-ai-1792w.webp 1792w,
+                        ../assets/stockholm-ai-1280w.webp 1280w,
+                        ../assets/stockholm-ai-640w.webp 640w"
                 sizes="100vw"
                 type="image/webp">
-            <source 
-                srcset="assets/stockholm-ai-1792w.jpg 1792w,
-                        assets/stockholm-ai-1280w.jpg 1280w,
-                        assets/stockholm-ai-640w.jpg 640w"
+            <source
+                srcset="../assets/stockholm-ai-1792w.jpg 1792w,
+                        ../assets/stockholm-ai-1280w.jpg 1280w,
+                        ../assets/stockholm-ai-640w.jpg 640w"
                 sizes="100vw"
                 type="image/jpeg">
-            <img src="assets/stockholm-ai-1280w.jpg" 
-                 alt="Stockholm City AI Visualization" 
+            <img src="../assets/stockholm-ai-1280w.jpg"
+                 alt="Stockholm City AI Visualization"
                  class="header-image"
                  width="1792"
                  height="1024"
@@ -277,62 +290,89 @@
         </picture>
         <div class="header-content">
             <picture>
-                <source srcset="assets/logo-240w.webp 240w, assets/logo-360w.webp 360w" type="image/webp">
-                <source srcset="assets/logo-240w.png 240w, assets/logo-360w.png 360w" type="image/png">
-                <source srcset="assets/favicon.webp" type="image/webp">
-                <img src="assets/favicon.png" 
-                     alt="Stockholm AI Engineering Logo" 
+                <source srcset="../assets/favicon.webp" type="image/webp">
+                <img src="../assets/favicon.png"
+                     alt="Stockholm AI Engineering Logo"
                      class="logo"
                      width="120"
                      height="120"
                      loading="eager"
-                     decoding="async"
-                     style="image-rendering: -webkit-optimize-contrast; transform: translateZ(0);">
+                     decoding="async">
             </picture>
-            <h1>AI Engineering In Stockholm</h1>
-            <p>A community for AI developers in Stockholm</p>
+            <h1>Community Event – Terms &amp; Conditions / Participation Agreement</h1>
+            <p>AI Engineering In Stockholm</p>
+            <div class="pill" aria-label="Terms and Conditions version">Version: v1</div>
         </div>
     </header>
 
     <div class="container">
-        <section class="section">
-            <h2>Welcome to AI Engineering In Stockholm</h2>
-            <p>We are a community for developers, engineers, and AI enthusiasts in Stockholm. Our goal is to create an inclusive environment where we can share knowledge, experiences, and grow together in AI and machine learning.</p>
+        <section class="section" aria-labelledby="toc">
+            <h2 id="toc">Summary</h2>
+            <p>This page is a versioned Terms &amp; Conditions document intended for linking from external signup flows.</p>
+            <p><strong>Permalink for this version:</strong> <a href="./v1.html">/terms/v1.html</a></p>
         </section>
 
-        <section class="section">
-            <h2>Upcoming Meetups</h2>
-            <p>Follow us on Meetup to stay updated about our upcoming events and gatherings.</p>
-            <a href="https://luma.com/AIEngineeringInStockholm" class="cta-button">Subscribe to our Luma calendar</a>
-        </section>
+        <section class="section" aria-labelledby="terms">
+            <h2 id="terms">Community Event – Terms &amp; Conditions</h2>
+            <ol>
+                <li id="agreement-to-terms">
+                    <h3>Agreement to Terms</h3>
+                    <p>By registering for and attending this community event (physical or online), you agree to these Terms &amp; Conditions. If you do not agree, do not attend or participate.</p>
+                </li>
 
-        <section class="section">
-            <h2>Community Calendar</h2>
-            <p>Browse upcoming events from our Luma calendar—we hope to see you soon.</p>
-            <div class="calendar-embed">
-                <iframe
-                    src="https://lu.ma/embed/calendar/cal-IB6jRRjjT9BdIMz/events"
-                    height="600"
-                    width="100%"
-                    loading="lazy"
-                    title="AI Engineering In Stockholm events"
-                    allowfullscreen
-                    frameborder="0"
-                    scrolling="no"
-                ></iframe>
-            </div>
-        </section>
+                <li id="eligibility-18-plus">
+                    <h3>Eligibility – 18+ Only</h3>
+                    <p>This community event is strictly for participants aged 18 or older. By attending, you confirm that you are at least 18 years of age. No minors are permitted under any circumstances.</p>
+                </li>
 
-        <section class="section">
-            <h2>Code of Conduct</h2>
-            <p>To create an inclusive and respectful environment for all participants, we have adopted a Code of Conduct. This applies to all our events and communication channels.</p>
-            <a href="code-of-conduct.html" class="cta-button">Read our Code of Conduct</a>
-        </section>
+                <li id="code-of-conduct">
+                    <h3>Code of Conduct</h3>
+                    <p>This community event is a respectful, inclusive space.</p>
+                    <p><strong>Expected behavior</strong></p>
+                    <ul>
+                        <li>Be respectful, constructive, and professional.</li>
+                        <li>Respect differences in background, identity, experience, and opinions.</li>
+                    </ul>
+                    <p><strong>Unacceptable behavior</strong></p>
+                    <p>Harassment, discrimination, intimidation, bullying, or offensive behavior of any kind will not be tolerated. This includes conduct related to gender, gender identity, sexual orientation, disability, age, ethnicity, religion, political views, or technology choices.</p>
+                    <p>Organizers may remove participants who violate this Code of Conduct immediately and without refund.</p>
+                    <p><a href="../code-of-conduct.html">Read the full Code of Conduct</a></p>
+                </li>
 
-        <section class="section">
-            <h2>Terms &amp; Conditions</h2>
-            <p>For some events we require acceptance of a participation agreement. Use the latest Terms &amp; Conditions link below, or a versioned link when you need a fixed reference from external signups (for example: <code>/terms/v1.html</code>).</p>
-            <a href="terms/" class="cta-button">Read Terms &amp; Conditions</a>
+                <li id="recording-photography-media-consent">
+                    <h3>Recording, Photography &amp; Media Consent</h3>
+                    <p>Audio recording, video recording, and photography may occur during the community event.</p>
+                    <p>By attending, you:</p>
+                    <ul>
+                        <li>Explicitly consent to being recorded, photographed, and filmed.</li>
+                        <li>Grant permission for your voice, image, likeness, name, and statements to be used, edited, published, and distributed in any media format, worldwide, without compensation.</li>
+                        <li>Acknowledge that this material may be used for social media, websites, documentation, promotion, and future community content.</li>
+                    </ul>
+                    <p>If you do not wish to appear in recordings or photos, inform an organizer. Reasonable efforts will be made, but complete exclusion cannot be guaranteed.</p>
+                </li>
+
+                <li id="assumption-of-risk-liability">
+                    <h3>Assumption of Risk &amp; Liability</h3>
+                    <p>You attend at your own risk and assume full responsibility for:</p>
+                    <ul>
+                        <li>Any injury, loss, or damage resulting from participation.</li>
+                        <li>Your personal property.</li>
+                    </ul>
+                    <p>Organizers, volunteers, speakers, sponsors, and venue providers are not liable for any claims, losses, or damages, except where required by applicable law.</p>
+                </li>
+
+                <li id="venue-rules-safety">
+                    <h3>Venue Rules &amp; Safety</h3>
+                    <p>You agree to follow all venue rules, safety instructions, and directions from organizers and staff.</p>
+                </li>
+
+                <li id="event-changes-or-cancellation">
+                    <h3>Event Changes or Cancellation</h3>
+                    <p>The community event may be modified, postponed, or cancelled at any time. Organizers are not responsible for travel, accommodation, or other participant costs.</p>
+                </li>
+            </ol>
+
+            <a href="../index.html" class="back-link">← Back to Home</a>
         </section>
     </div>
 
@@ -343,4 +383,4 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
-</html> 
+</html>
