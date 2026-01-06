@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Event – Terms &amp; Conditions - AI Engineering In Stockholm</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png" sizes="64x64">
-    <meta http-equiv="refresh" content="0; url=./v1.html">
+    <meta http-equiv="refresh" content="2; url=./v1.html">
     <link rel="canonical" href="./v1.html">
     <meta name="description" content="Latest Community Event Terms & Conditions / Participation Agreement.">
     <style>
@@ -196,30 +196,10 @@
                 padding: 1.5rem;
             }
         }
-
-        /* Preload largest image */
-        .preload-images {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
     </style>
     <link rel="preload" as="image" href="../assets/stockholm-ai-1792w.webp">
 </head>
 <body>
-    <!-- Preload images -->
-    <div class="preload-images">
-        <link rel="preload" as="image" href="../assets/stockholm-ai-1792w.webp">
-        <link rel="preload" as="image" href="../assets/stockholm-ai-1280w.webp">
-        <link rel="preload" as="image" href="../assets/stockholm-ai-640w.webp">
-    </div>
-
     <header>
         <picture>
             <source
@@ -254,7 +234,7 @@
                      decoding="async">
             </picture>
             <h1>Community Event – Terms &amp; Conditions</h1>
-            <p>Redirecting to the latest version…</p>
+            <p aria-live="polite">Redirecting to the latest version…</p>
         </div>
     </header>
 
@@ -272,7 +252,7 @@
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         // Prefer JS redirect (keeps /terms/ stable) with fallback to meta refresh.
-        window.location.replace('./v1.html');
+        window.setTimeout(() => window.location.replace('./v1.html'), 1500);
     </script>
 </body>
 </html>
