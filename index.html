@@ -87,20 +87,6 @@
             backdrop-filter: blur(2px);
         }
 
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 0.5rem;
-            border-radius: 50%;
-            border: 3px solid white;
-            object-fit: cover;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            -ms-interpolation-mode: bicubic;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-
         h1 {
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 0.5rem;
@@ -276,19 +262,6 @@
                  decoding="async">
         </picture>
         <div class="header-content">
-            <picture>
-                <source srcset="assets/logo-240w.webp 240w, assets/logo-360w.webp 360w" type="image/webp">
-                <source srcset="assets/logo-240w.png 240w, assets/logo-360w.png 360w" type="image/png">
-                <source srcset="assets/favicon.webp" type="image/webp">
-                <img src="assets/favicon.png" 
-                     alt="Stockholm AI Engineering Logo" 
-                     class="logo"
-                     width="120"
-                     height="120"
-                     loading="eager"
-                     decoding="async"
-                     style="image-rendering: -webkit-optimize-contrast; transform: translateZ(0);">
-            </picture>
             <h1>AI Engineering In Stockholm</h1>
             <p>A community for AI developers in Stockholm</p>
         </div>
