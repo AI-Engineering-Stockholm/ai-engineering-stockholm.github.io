@@ -359,12 +359,6 @@
     </header>
 
     <div class="container">
-        <section class="section" aria-labelledby="toc">
-            <h2 id="toc">Summary</h2>
-            <p>This page is a versioned Terms &amp; Conditions document intended for linking from external signup flows.</p>
-            <p><strong>Permalink for this version:</strong> <a href="./v1.html">/terms/v1.html</a></p>
-        </section>
-
         <section class="section" aria-labelledby="terms">
             <h2 id="terms">Community Event – Terms &amp; Conditions</h2>
             <ol>
@@ -389,7 +383,7 @@
                     <p><strong>Unacceptable behavior</strong></p>
                     <p>Harassment, discrimination, intimidation, bullying, or offensive behavior of any kind will not be tolerated. This includes conduct related to gender, gender identity, sexual orientation, disability, age, ethnicity, religion, political views, or technology choices.</p>
                     <p>Organizers may remove participants who violate this Code of Conduct immediately and without refund.</p>
-                    <p><a href="../code-of-conduct.html">Read the full Code of Conduct</a></p>
+                    <p><a id="coc-link" href="../code-of-conduct.html">Read the full Code of Conduct</a></p>
                 </li>
 
                 <li id="recording-photography-media-consent">
@@ -440,6 +434,11 @@
         if (urlParams.get('unbranded') === 'true' || urlParams.get('unbranded') === '1') {
             document.body.classList.add('unbranded');
             document.title = 'Community Event – Terms & Conditions';
+            // Update Code of Conduct link to include unbranded parameter
+            const cocLink = document.getElementById('coc-link');
+            if (cocLink) {
+                cocLink.href = '../code-of-conduct.html?unbranded=true';
+            }
         }
     </script>
 </body>
