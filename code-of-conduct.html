@@ -87,6 +87,15 @@
             backdrop-filter: blur(2px);
         }
 
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 0.5rem;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+        }
+
         h1 {
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 0.5rem;
@@ -284,8 +293,8 @@
         }
 
         body.unbranded a {
-            color: #000000;
-            text-decoration: underline;
+            color: #000000 !important;
+            text-decoration: underline !important;
         }
 
         @media print {
