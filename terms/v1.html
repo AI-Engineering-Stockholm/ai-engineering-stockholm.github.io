@@ -253,6 +253,76 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Unbranded mode - black and white, minimal styling */
+        body.unbranded {
+            background-color: #ffffff;
+            background-image: none;
+        }
+
+        body.unbranded header,
+        body.unbranded footer,
+        body.unbranded .back-link,
+        body.unbranded .pill {
+            display: none;
+        }
+
+        body.unbranded .container {
+            margin-top: 2rem;
+            max-width: 800px;
+        }
+
+        body.unbranded .section {
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        body.unbranded .section::after {
+            display: none;
+        }
+
+        body.unbranded .section:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        body.unbranded h2 {
+            color: #000000;
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: #000000;
+            background-clip: unset;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        body.unbranded h3 {
+            color: #000000;
+            margin-top: 1.5rem;
+        }
+
+        body.unbranded p,
+        body.unbranded li,
+        body.unbranded ul,
+        body.unbranded ol {
+            color: #000000;
+        }
+
+        body.unbranded a {
+            color: #000000 !important;
+            text-decoration: underline !important;
+        }
+
+        @media print {
+            body.unbranded .section {
+                page-break-inside: avoid;
+            }
+        }
     </style>
     <link rel="preload" as="image" href="../assets/stockholm-ai-1792w.webp">
 </head>
@@ -362,6 +432,13 @@
     </footer>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Check for unbranded parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('unbranded') === 'true' || urlParams.get('unbranded') === '1') {
+            document.body.classList.add('unbranded');
+            document.title = 'Community Event – Terms & Conditions';
+        }
     </script>
 </body>
 </html>
