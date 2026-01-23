@@ -165,6 +165,16 @@
             margin-bottom: 0.5rem;
         }
 
+        .section a:not(.back-link) {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .section a:not(.back-link):hover {
+            text-decoration: underline;
+        }
+
         .back-link {
             display: inline-block;
             background: linear-gradient(135deg, var(--accent-color), #ea580c);
@@ -396,7 +406,7 @@
 
         <section class="section">
             <h2>Attribution</h2>
-            <p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Contributor Covenant</a>.</p>
+            <p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org" target="_blank" rel="noopener noreferrer">Contributor Covenant</a>.</p>
             <a href="index.html" class="back-link">← Back to Home</a>
         </section>
     </div>
